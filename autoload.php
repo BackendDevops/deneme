@@ -8,7 +8,19 @@ use Kvnc\Env;
 use Kvnc\DB;
 use Kvnc\Action;
 use Kvnc\ApiLimit;
-set_time_limit(180);
+set_time_limit(60);
+ini_set('display_errors', '0');         
+
+
+function shutdown()
+{
+    $error = error_get_last();
+
+       if ($error['type'] === E_ERROR) {
+           echo '<pre>'.$error.'</pre>';
+       }
+}
+register_shutdown_function('shutdown');
 (new Env(__DIR__ . '/.env'))->init();
 
 $env = getenv();
