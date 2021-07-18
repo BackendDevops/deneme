@@ -15,3 +15,5 @@
 
  ApiLimit class limiting max 30 request in 60 seconds
 
+ .env copy to .env and set the variables
+
