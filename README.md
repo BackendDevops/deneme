@@ -1,7 +1,7 @@
 # Deneme Project
 
 ### First use crontab -e 
-    * * * * path/to/script/fetch.php 
+    * * * * path/to/script/fetch.php
     * * * 10 path/to/script/failed.php
     * * * * path/to/script/approve.php
  
